@@ -5,49 +5,47 @@ import "@fontsource/roboto";
 import React from "react";
 import backgroundVideo from "./resources/backgroundVideo.mp4";
 import HomeScreen from "./pages/HomeScreen.js";
+import AboutScreen from "./pages/AboutScreen.js";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 
 
 function App() {
   const isMobile = window.screen.width < 1280;
+  const mobileVideoStyle ={textAlign:'center',position:'fixed',minWidth:"100%",minHeight:"100%",backgroundSize:'cover',backgroundPosition:'cover'};
+  const desktopVideoStyle = {
+    position: "absolute",
+    width: !isMobile?"100%":"auto",
+    left: !isMobile?"50%":"30%",
+    top: !isMobile?"50%":"70%",
+    height: !isMobile?"100%":"auto",
+    objectFit: "cover",
+    transform: "translate(-50%,-50%)",
+    zIndex: "-1",
+  };
   return (
+    
     <React.Fragment>
-     <video
+      <video
         autoPlay
         loop
         muted
         id="video"
-        style={{
-          position: "absolute",
-          width: "100%",
-          left: "50%",
-          top: "50%",
-          height: "100%",
-          objectFit: "cover",
-          transform: "translate(-50%,-50%)",
-          zIndex: "-1",
-        }}
+        style={isMobile?mobileVideoStyle:desktopVideoStyle}
+        playsInline
       >
         <source src={backgroundVideo} type="video/mp4"></source>
       </video> 
+      <Router>
   
- 
-
-
-      <div
-        style={{
-          fontFamily: "Roboto",
-          paddingTop: "50px",
-          marginLeft: "40px",
-          marginBottom: "30px",
-          fontSize: "80px",
-          color: "white",
-        }}
-      >
-        Raed Ibrahim Albloushy
-      </div>
-      {HomeScreen()}
+    <Routes>
+      <Route path="/" element={<HomeScreen />} />
+      <Route path="/about" element={<AboutScreen />} />
+    </Routes>
+  </Router>  
+    
     </React.Fragment>
+
   );
 }
 
