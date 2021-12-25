@@ -18,7 +18,7 @@ function RaedTitleHeader(props) {
 function RaedDescriptionText(props) {
   return (
     <Text italic style={props.style}>
-      A fullStack developer who is always looking for adventures!
+      A fullstack developer who is always looking for adventures!
     </Text>
   );
 }
