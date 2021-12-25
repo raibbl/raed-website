@@ -50,7 +50,7 @@ function AboutScreen() {
             />
           </MDBCol>
           <MDBCol md="8">
-            <MDBCardBody style={{ fontSize : '18px',backgroundColor: "rgba(0, 0, 0, 0.3)" }}>
+            <MDBCardBody style={{ fontSize : '18px',backgroundColor: "rgba(0, 0, 0, 0.3)", borderRadius: "25px" }}>
               <MDBCardText>
                 I'm a 2020 computer engineering graduate from Iowa State
                 University. I love hiking,photography,videography and involving
