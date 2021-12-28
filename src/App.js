@@ -51,10 +51,11 @@ function App() {
             bottom: "0px",
             left: "0px",
             zIndex: 1,
-            width: "50%",
+            width: "auto",
             backgroundColor: "rgba(255, 255, 255, 0)",
           }}
         >
+          <div style={{ paddingLeft:'5px',backgroundColor: "rgba(255, 255, 255, 0.2)",width:'110%', height:'75%',   borderRadius: "15px"}}>
           <Button
             type="link"
             onClick={() =>
@@ -67,7 +68,7 @@ function App() {
               <LinkedinOutlined
                 style={{
                   fontSize: "30px",
-                  paddingRight: "10px",
+                  paddingRight: "5px",
                   color: "rgba(255, 255, 255, .5)",
                 }}
               />
@@ -87,6 +88,7 @@ function App() {
               />
             }
           />
+          </div>
         </Header>
       ) : null}
 
