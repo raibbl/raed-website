@@ -8,8 +8,8 @@ import HomeScreen from "./pages/HomeScreen.js";
 import AboutScreen from "./pages/AboutScreen.js";
 import { LinkedinOutlined, YoutubeOutlined } from "@ant-design/icons";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Layout, Button } from "antd";
-const { Header } = Layout;
+import {  Button } from "antd";
+
 
 function App() {
   const isMobile = window.screen.width < 1280;
@@ -45,9 +45,10 @@ function App() {
   return (
     <React.Fragment>
       {!isAtScreenBottom ? (
-        <Header
+        <div
           style={{
             position: "fixed",
+            padding:'20px',
             bottom: "0px",
             left: "0px",
             zIndex: 1,
@@ -89,7 +90,7 @@ function App() {
             }
           />
           </div>
-        </Header>
+        </div>
       ) : null}
 
       <video
