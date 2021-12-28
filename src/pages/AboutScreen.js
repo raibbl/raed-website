@@ -33,10 +33,9 @@ function AboutScreen() {
         title={<Text style={{ color: "white" }}>About Me</Text>}
       />
       <MDBCard
-        style={{ padding: "20px", opacity: "0.75" }}
+        style={{  opacity: "0.75",maxWidth: "2000px", maxHeight: "2000px"  }}
         background="transparent"
         className="text-white"
-        style={{ maxWidth: "2000px", maxHeight: "2000px" }}
       >
         <MDBRow className="g-0">
           <MDBCol md="3">
@@ -85,7 +84,6 @@ function AboutScreen() {
                 products.
               </MDBCardText>
               <br></br>
-
               <MDBCardText>
                 I continue to grow as a developer and learn new and intersting
                 technologies. my biggest fear is staying stangent in this
