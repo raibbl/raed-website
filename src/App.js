@@ -2,18 +2,33 @@ import "./App.css";
 import "./index.css";
 import "antd/dist/antd.css";
 import "@fontsource/roboto";
-import React, { useState } from "react";
+import React, { useEffect,useState } from "react";
 import backgroundVideo from "./resources/backgroundVideo.mp4";
 import HomeScreen from "./pages/HomeScreen.js";
 import AboutScreen from "./pages/AboutScreen.js";
-import { LinkedinOutlined, YoutubeOutlined } from "@ant-design/icons";
+import { LinkedinOutlined, YoutubeOutlined, SmileOutlined} from "@ant-design/icons";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import {  Button } from "antd";
+import {  Button,notification } from "antd";
 
 
 function App() {
   const isMobile = window.screen.width < 1280;
   const [isAtScreenBottom, setisAtScreenBottom] = useState(false);
+  useEffect(() => {
+    notification.open({
+      message:  <div style={{color:'white'}}>Website under Construction</div>,
+      duration:3,
+      description:
+        <div style={{color:'white'}}>This website is still a work in progress, thank you for visiting :)</div>,
+      className: 'custom-class',
+      icon: <SmileOutlined style={{ color: 'purple' }} />,
+      style: {
+        width: 600,
+        opacity:0.8,
+        backgroundColor:'black'
+      },
+    });
+  },[]);
   const mobileVideoStyle = {
     textAlign: "center",
     position: "fixed",
