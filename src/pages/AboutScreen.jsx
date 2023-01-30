@@ -33,7 +33,7 @@ function AboutScreen() {
         title={<Text style={{ color: "white" }}>About Me</Text>}
       />
       <MDBCard
-        style={{  opacity: "0.75",maxWidth: "2000px", maxHeight: "2000px"  }}
+        style={{ opacity: "0.75", maxWidth: "2000px", maxHeight: "2000px" }}
         background="transparent"
         className="text-white"
       >
@@ -49,7 +49,13 @@ function AboutScreen() {
             />
           </MDBCol>
           <MDBCol md="8">
-            <MDBCardBody style={{ fontSize : '18px',backgroundColor: "rgba(0, 0, 0, 0.3)", borderRadius: "25px" }}>
+            <MDBCardBody
+              style={{
+                fontSize: "18px",
+                backgroundColor: "rgba(0, 0, 0, 0.3)",
+                borderRadius: "25px",
+              }}
+            >
               <MDBCardText>
                 I'm a 2020 computer engineering graduate from Iowa State
                 University. I love hiking,photography,videography and involving

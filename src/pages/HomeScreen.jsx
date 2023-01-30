@@ -2,9 +2,11 @@ import "../App.css";
 import "../index.css";
 import "antd/dist/antd.css";
 import { Button, Row, Col, Typography, Timeline } from "antd";
+import { DownloadOutlined } from "@ant-design/icons";
 import "@fontsource/roboto";
 import React from "react";
-import { useNavigate } from 'react-router-dom';
+import raedResume from "../resources/raedResume.pdf";
+import { useNavigate } from "react-router-dom";
 
 const { Text } = Typography;
 const baseRaedTitleHeaderStyling = {
@@ -81,13 +83,25 @@ function ScreenContentDesktop() {
         justify="center"
       >
         <Col>
-          <Button size="large" onClick={()=> navigate('/about')} style={{ color: "white" }} ghost>
+          <Button
+            size="large"
+            onClick={() => navigate("/about")}
+            style={{ color: "white" }}
+            ghost
+          >
             About Me
           </Button>
         </Col>
         <Col style={{ marginLeft: "10px" }}>
-          <Button size="large" style={{ color: "white" }} ghost>
-            Experince
+          <Button
+            size="large"
+            href={raedResume}
+            target="_blank"
+            style={{ color: "white" }}
+            icon={<DownloadOutlined />}
+            ghost
+          >
+            Resume
           </Button>
         </Col>
         <Col style={{ marginLeft: "10px" }}>
@@ -144,13 +158,18 @@ function ScreenContentMobile() {
           justify="center"
         >
           <Col>
-            <Button onClick={()=> navigate('/about')} size="small" style={{ color: "white" }} ghost>
+            <Button
+              onClick={() => navigate("/about")}
+              size="small"
+              style={{ color: "white" }}
+              ghost
+            >
               About Me
             </Button>
           </Col>
           <Col style={{ marginLeft: "5px" }}>
             <Button size="small" style={{ color: "white" }} ghost>
-              Experince
+              Resume
             </Button>
           </Col>
           <Col style={{ marginLeft: "5px" }}>
