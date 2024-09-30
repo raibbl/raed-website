@@ -44,13 +44,12 @@ function App() {
     backgroundPosition: "cover",
   };
   const desktopVideoStyle = {
-    position: "absolute",
-    width: "100%",
-    left: "50%",
-    top: "50%",
-    height: "auto",
+    position: "fixed",
+    top: 0,
+    left: 0,
+    width: "100vw",
+    height: "100vh",
     objectFit: "cover",
-    transform: "translate(-50%,-50%)",
     zIndex: "-1",
   };
   window.onscroll = function () {
