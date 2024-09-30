@@ -20,7 +20,8 @@ function RaedTitleHeader(props) {
 function RaedDescriptionText(props) {
   return (
     <Text italic style={props.style}>
-      A fullstack developer who is always looking for adventures!
+      A full-stack developer dedicated to continuous learning and building
+      innovative solutions.
     </Text>
   );
 }
@@ -28,20 +29,26 @@ function RaedDescriptionText(props) {
 function RaedTimeline(props) {
   return (
     <Timeline mode="right" style={props.style}>
+      {/* <Timeline.Item style={{ color: "white" }} color="white">
+        Launched Food Inventory App - 2024
+      </Timeline.Item> */}
       <Timeline.Item style={{ color: "white" }} color="white">
-        Joined GlobalVetLink May 2021
+        Promoted to Software Engineer Level 2 - Nov 2021
       </Timeline.Item>
       <Timeline.Item style={{ color: "white" }} color="white">
-        Joined SmartData Solutions Aug 2020
+        Joined GlobalVetLink - May 2021
       </Timeline.Item>
       <Timeline.Item style={{ color: "white" }} color="white">
-        Graduated from ISU May 2020
+        SmartData Solutions - Aug 2020
       </Timeline.Item>
       <Timeline.Item style={{ color: "white" }} color="white">
-        ISU TA Jan 2020
+        Graduated from ISU - May 2020
       </Timeline.Item>
       <Timeline.Item style={{ color: "white" }} color="white">
-        Siemens Engineering Intern June 2019
+        ISU Teaching Assistant - Jan 2020
+      </Timeline.Item>
+      <Timeline.Item style={{ color: "white" }} color="white">
+        Siemens Engineering Intern - June 2019
       </Timeline.Item>
     </Timeline>
   );
