@@ -7,6 +7,7 @@ import "@fontsource/roboto";
 import React from "react";
 import raedResume from "../resources/raedResume.pdf";
 import { useNavigate } from "react-router-dom";
+import useIsMobile from "../hooks/useIsMobile";
 
 const { Text } = Typography;
 const baseRaedTitleHeaderStyling = {
@@ -84,6 +85,7 @@ function ScreenContentDesktop() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          flexWrap: "wrap",
           height: "60vh",
           width: "50h",
         }}
@@ -142,7 +144,7 @@ function ScreenContentMobile() {
             }}
           ></RaedTitleHeader>
           <RaedDescriptionText
-            style={{ color: "white", paddingLeft: "10px", textAlign: "center" }}
+            style={{ color: "white", paddingLeft: "20px", textAlign: "center" }}
           ></RaedDescriptionText>
           <RaedTimeline
             style={{
@@ -159,6 +161,7 @@ function ScreenContentMobile() {
             justifyContent: "center",
             paddingLeft: "20px",
             alignItems: "center",
+            flexWrap: "wrap", // Added to wrap buttons properly
             height: "auto",
             width: "auto",
           }}
@@ -194,11 +197,13 @@ function ScreenContentMobile() {
     </React.Fragment>
   );
 }
+
 function HomeScreen() {
-  const isMobile = window.screen.width < 1280;
+  const isMobile = useIsMobile();
+  console.log(isMobile);
   return (
     <React.Fragment>
-      {!isMobile ? ScreenContentDesktop() : ScreenContentMobile()}
+      {!isMobile ? <ScreenContentDesktop /> : <ScreenContentMobile />}
     </React.Fragment>
   );
 }
