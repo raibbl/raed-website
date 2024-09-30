@@ -57,45 +57,37 @@ function AboutScreen() {
               }}
             >
               <MDBCardText>
-                I'm a 2020 computer engineering graduate from Iowa State
-                University. I love hiking,photography,videography and involving
-                myself in newer techonlogies.
+                I'm a 2020 Computer Engineering graduate from Iowa State
+                University with a passion for full-stack development,
+                problem-solving, and continuously learning new technologies. I
+                enjoy hiking, photography, and videography in my free time,
+                alongside exploring the latest trends in tech.
               </MDBCardText>
               <br></br>
               <MDBCardText>
-                As a computer engineering student I found myself lost with all
-                the possible routes I could take with my carrer. I was taking
-                courses ranging from pure embedded systems low level coding to
-                CS project courses involving mobile apps. Working through some
-                of my tech electives and going through my internships; I
-                realized that I really like knowing the ins and out of a
-                program. Where did it get its data from ? How does it display
-                this data ? How do all the parts work togther? I really enjoyed
-                the full stack of things.
+                Throughout my career, I have worked with a range of
+                technologies, from React and Spring Boot to MongoDB, PostgreSQL,
+                and Grails, building and supporting scalable applications in
+                industries such as veterinary healthcare. I love understanding
+                how programs function end-to-end, from data handling to frontend
+                interfaces, which has driven my passion for full-stack
+                development.
               </MDBCardText>
               <br></br>
               <MDBCardText>
-                I started working as full-time Account Management Programmer for
-                a health insurance middlehouse software company called SmartData
-                solutions on Aug 3rd of 2020. I practiced my debugging skills
-                and communication skills every work day for 9 months, I was
-                acting as a suport enginer implemnting new clinets on our system
-                and supporting existing clients running on our Java based
-                system. Then I moved on to work for Global VetLink, an animal
-                health software company, as a full stack developer. I started
-                out as a Software enginer Level 1 on the 1st of May 2021 and
-                transtioned into a level 2 role after 6 months with the company.
-                I use React and groovy/grails everyday to support existing
-                Animal health products and develop new features on new company
-                products.
+                After starting my career at SmartData Solutions as an Account
+                Management Programmer, I transitioned to GlobalVetLink in May
+                2021. Here, I progressed from Software Engineer Level 1 to Level
+                2 within six months, working extensively with React and
+                Groovy/Grails to develop new features and enhance the
+                performance of animal health software solutions.
               </MDBCardText>
               <br></br>
               <MDBCardText>
-                I continue to grow as a developer and learn new and intersting
-                technologies. my biggest fear is staying stangent in this
-                industry, I practice algorithms (leetcode) and try to keep up to
-                date with all that is new in hopes of one day building the next
-                big thing!
+                I'm always eager to grow as a developer, regularly practicing
+                algorithms and keeping up-to-date with emerging technologies
+                like Next.js, Kotlin, and Wear OS. My goal is to continue
+                improving and, one day, build something groundbreaking.
               </MDBCardText>
             </MDBCardBody>
           </MDBCol>
