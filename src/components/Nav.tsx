@@ -42,7 +42,7 @@ export default function Nav() {
         ))}
       </Space>
 
-      <Space className="nav-desktop-cta" size="small" style={{ display: "none" }}>
+      <Space size="small">
         <Button
           type="text"
           href={socials.github}
@@ -57,17 +57,18 @@ export default function Nav() {
           aria-label="LinkedIn"
           icon={<LinkedinOutlined style={{ color: "#9a9aab", fontSize: 18 }} />}
         />
-        <Button icon={<DownloadOutlined />} href="/resume.pdf" target="_blank">
-          Resume
-        </Button>
+        <span className="nav-desktop-cta" style={{ display: "none" }}>
+          <Button icon={<DownloadOutlined />} href="/resume.pdf" target="_blank">
+            Resume
+          </Button>
+        </span>
+        <Button
+          className="nav-mobile-toggle"
+          type="text"
+          icon={<MenuOutlined style={{ color: "#e2e2e9" }} />}
+          onClick={() => setOpen(true)}
+        />
       </Space>
-
-      <Button
-        className="nav-mobile-toggle"
-        type="text"
-        icon={<MenuOutlined style={{ color: "#e2e2e9" }} />}
-        onClick={() => setOpen(true)}
-      />
 
       <Drawer open={open} onClose={() => setOpen(false)} placement="right" title="Menu">
         <Space orientation="vertical" size="large">
@@ -76,20 +77,6 @@ export default function Nav() {
               {l.label}
             </a>
           ))}
-          <Space size="middle">
-            <Button
-              href={socials.github}
-              target="_blank"
-              aria-label="GitHub"
-              icon={<GithubOutlined />}
-            />
-            <Button
-              href={socials.linkedin}
-              target="_blank"
-              aria-label="LinkedIn"
-              icon={<LinkedinOutlined />}
-            />
-          </Space>
           <Button icon={<DownloadOutlined />} href="/resume.pdf" target="_blank" block>
             Resume
           </Button>
