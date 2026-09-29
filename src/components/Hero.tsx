@@ -27,7 +27,8 @@ export default function Hero() {
       </Title>
       <Paragraph style={{ color: "#9a9aab", fontSize: 19, maxWidth: 640 }}>
         I build reliable, scalable software across web, mobile, and backend —
-        from fintech integrations at GlobalVetLink to AI-powered side projects.
+        from veterinary health software at GlobalVetLink to AI-powered side
+        projects.
       </Paragraph>
       <Space size="middle" style={{ marginTop: 24 }} wrap>
         <Button type="primary" size="large" href="#projects" icon={<ArrowRightOutlined />}>
