@@ -73,13 +73,14 @@ export type Project = {
   description: string;
   tech: string[];
   href?: string;
+  playStoreId?: string;
 };
 
 export const projects: Project[] = [
   {
     name: "ScanBid",
     description:
-      "Auction inventory platform that pulls product descriptions from external sources using AI. Built to explore Next.js 14 and production AI integration patterns.",
+      "Private experiment in AI-integrated auction tooling — pulls product descriptions from external sources via AI. Built mainly to explore Next.js 14 and production AI integration patterns, not a polished product.",
     tech: ["Next.js 14", "Prisma", "PostgreSQL", "AI APIs"],
   },
   {
@@ -97,10 +98,10 @@ export const projects: Project[] = [
   },
   {
     name: "AyaBelQuran",
-    description:
-      "Wear OS app to pull a Quran verse with audio on your wrist. Open source, 150+ installs.",
+    description: "Wear OS app to pull a Quran verse with audio on your wrist. Open source.",
     tech: ["Kotlin", "Jetpack Compose", "Wear OS"],
     href: "https://github.com/raibbl/AyaBelQuran",
+    playStoreId: "com.raibbl.ayabelquran",
   },
   {
     name: "inkcal",
