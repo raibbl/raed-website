@@ -71,6 +71,7 @@ export const skills: Record<string, string[]> = {
 export type Project = {
   name: string;
   description: string;
+  highlights: string[];
   tech: string[];
   href?: string;
   playStoreId?: string;
@@ -81,12 +82,20 @@ export const projects: Project[] = [
     name: "ScanBid",
     description:
       "Private experiment in AI-integrated auction tooling — pulls product descriptions from external sources via AI. Built mainly to explore Next.js 14 and production AI integration patterns, not a polished product.",
+    highlights: [
+      "AI-assisted data enrichment pipeline, not just a CRUD app",
+      "A sandbox for testing Next.js 14 patterns before using them at work",
+    ],
     tech: ["Next.js 14", "Prisma", "PostgreSQL", "AI APIs"],
   },
   {
     name: "AiAnalyze",
     description:
       "Android app (published as \"Briefly\") using Gemini to summarize articles and links into searchable snippets.",
+    highlights: [
+      "Live on Google Play, not just a portfolio demo",
+      "Gemini API integration for on-device summarization",
+    ],
     tech: ["Kotlin", "Jetpack Compose", "Gemini API", "DynamoDB"],
     playStoreId: "com.raibbl.AiAnalyze",
   },
@@ -94,12 +103,21 @@ export const projects: Project[] = [
     name: "This site",
     description:
       "This portfolio itself — rebuilt from a stale Create React App/antd v4 site into Next.js 16 (App Router, SSR) with TypeScript and Ant Design v6.",
+    highlights: [
+      "Built with an AI coding agent end-to-end: stack migration, content, and infra",
+      "Domain (Cloudflare) and hosting (Vercel) connected entirely via CLI, including Cloudflare's brand-new agentic `cf` CLI",
+      "Play Store install counts fetched server-side and cached with ISR — updates automatically, no redeploy needed",
+    ],
     tech: ["Next.js", "TypeScript", "Ant Design v6"],
     href: "https://github.com/raibbl/raed-website",
   },
   {
     name: "AyaBelQuran",
     description: "Wear OS app to pull a Quran verse with audio on your wrist. Open source.",
+    highlights: [
+      "1,000+ installs, fully open source",
+      "Built for the watch itself, not a phone app mirrored to Wear OS",
+    ],
     tech: ["Kotlin", "Jetpack Compose", "Wear OS"],
     href: "https://github.com/raibbl/AyaBelQuran",
     playStoreId: "com.raibbl.ayabelquran",
@@ -108,6 +126,10 @@ export const projects: Project[] = [
     name: "inkcal",
     description:
       "E-ink calendar display: a Next.js backend paired with custom ESP32 firmware driving the physical display.",
+    highlights: [
+      "Full stack across software and hardware — web backend plus C++ firmware",
+      "Drives a real e-ink display, not a simulator",
+    ],
     tech: ["Next.js", "TypeScript", "C++/ESP32"],
     href: "https://github.com/raibbl/inkcal",
   },
@@ -115,6 +137,10 @@ export const projects: Project[] = [
     name: "TsLens",
     description:
       "VS Code extension that tracks a workspace's TypeScript adoption progress and flags JS files worth refactoring.",
+    highlights: [
+      "Published VS Code Marketplace extension, not just a script",
+      "Built to solve a real problem from his own TypeScript migration at work",
+    ],
     tech: ["TypeScript", "VS Code API"],
     href: "https://github.com/raibbl/TsLens",
   },

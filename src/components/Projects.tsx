@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, Tag, Typography, Row, Col, Space } from "antd";
-import { GithubOutlined, AndroidOutlined } from "@ant-design/icons";
+import { GithubOutlined, AndroidOutlined, RightOutlined } from "@ant-design/icons";
 import { projects, type Project } from "@/data/content";
 
 const { Title, Paragraph } = Typography;
@@ -31,6 +31,23 @@ function ProjectCard({ p, installs }: { p: Project; installs?: string | null }) 
         </Space>
       </div>
       <Paragraph style={{ color: "#9a9aab", marginTop: 10 }}>{p.description}</Paragraph>
+      <ul style={{ listStyle: "none", marginBottom: 10 }}>
+        {p.highlights.map((h) => (
+          <li
+            key={h}
+            style={{
+              color: "#c4c4cf",
+              fontSize: 13.5,
+              display: "flex",
+              gap: 6,
+              padding: "2px 0",
+            }}
+          >
+            <RightOutlined style={{ color: "#7c6cf6", fontSize: 10, marginTop: 4 }} />
+            <span>{h}</span>
+          </li>
+        ))}
+      </ul>
       {playStoreUrl && (
         <Tag color="green" style={{ marginBottom: 10 }}>
           {installs ? `${installs} installs` : "On Google Play"}
