@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { Button, Drawer, Space } from "antd";
-import { MenuOutlined, DownloadOutlined } from "@ant-design/icons";
+import { MenuOutlined, DownloadOutlined, GithubOutlined, LinkedinOutlined } from "@ant-design/icons";
+import { socials } from "@/data/content";
 
 const links = [
   { href: "#about", label: "About" },
@@ -41,11 +42,25 @@ export default function Nav() {
         ))}
       </Space>
 
-      <div className="nav-desktop-cta" style={{ display: "none" }}>
+      <Space className="nav-desktop-cta" size="small" style={{ display: "none" }}>
+        <Button
+          type="text"
+          href={socials.github}
+          target="_blank"
+          aria-label="GitHub"
+          icon={<GithubOutlined style={{ color: "#9a9aab", fontSize: 18 }} />}
+        />
+        <Button
+          type="text"
+          href={socials.linkedin}
+          target="_blank"
+          aria-label="LinkedIn"
+          icon={<LinkedinOutlined style={{ color: "#9a9aab", fontSize: 18 }} />}
+        />
         <Button icon={<DownloadOutlined />} href="/resume.pdf" target="_blank">
           Resume
         </Button>
-      </div>
+      </Space>
 
       <Button
         className="nav-mobile-toggle"
@@ -61,6 +76,20 @@ export default function Nav() {
               {l.label}
             </a>
           ))}
+          <Space size="middle">
+            <Button
+              href={socials.github}
+              target="_blank"
+              aria-label="GitHub"
+              icon={<GithubOutlined />}
+            />
+            <Button
+              href={socials.linkedin}
+              target="_blank"
+              aria-label="LinkedIn"
+              icon={<LinkedinOutlined />}
+            />
+          </Space>
           <Button icon={<DownloadOutlined />} href="/resume.pdf" target="_blank" block>
             Resume
           </Button>
