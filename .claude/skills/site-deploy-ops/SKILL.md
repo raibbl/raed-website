@@ -14,15 +14,31 @@ Always `cd` into `raed-website` first — running `vercel` from the parent
 `GitHub` folder deploys the wrong directory (it'll say "No framework
 detected").
 
+**Auto-deploy is connected** — the Vercel project (`raedalbloushy/raed-website`)
+is linked to the `raibbl/raed-website` GitHub repo via Vercel's GitHub App,
+with `productionBranch: master`. Any `git push origin master` triggers a
+production deploy automatically. Verify the link is live with:
+
+```bash
+TOKEN=$(python3 -c "import json; print(json.load(open('/Users/raedibrahim/Library/Application Support/com.vercel.cli/auth.json'))['token'])")
+curl -s "https://api.vercel.com/v9/projects/raed-website" -H "Authorization: Bearer $TOKEN" | python3 -c "import json,sys; print(json.load(sys.stdin).get('link'))"
+```
+A non-null `link` with `type: github` means it's connected — note `vercel
+project inspect` does NOT reliably show this in its text output even when
+connected; trust the API response over the CLI's printed summary.
+
+Manual/CLI deploy is still there as a fallback (e.g. to catch up a push that
+happened before the git connection existed, or to preview before pushing):
+
 ```bash
 cd raed-website
 npx vercel login          # OAuth device flow, opens a browser link
 npx vercel --prod --yes   # deploy to production
 ```
 
-Deploying to production makes the site publicly live — confirm with the user
-before running `--prod` unless they've already asked for it in this
-conversation.
+Both `git push` (now that it's connected) and manual `vercel --prod` make the
+site publicly live — confirm with the user before either unless they've
+already asked for it in this conversation.
 
 ## Custom domain + DNS (Cloudflare)
 
