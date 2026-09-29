@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Space, Tag, Typography } from "antd";
+import { Button, Space, Typography } from "antd";
 import { DownloadOutlined, ArrowRightOutlined } from "@ant-design/icons";
 
 const { Title, Paragraph, Text } = Typography;
@@ -15,10 +15,6 @@ export default function Hero() {
         margin: "0 auto",
       }}
     >
-      <Tag color="green" style={{ marginBottom: 16 }}>
-        Open to mid-senior / technical management roles
-      </Tag>
-      <br />
       <Text style={{ color: "#7c6cf6", letterSpacing: 2, fontWeight: 600 }}>
         SENIOR SOFTWARE ENGINEER
       </Text>
