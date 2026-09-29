@@ -38,8 +38,9 @@ export default function About() {
             interfaces people actually use.
           </Paragraph>
           <Paragraph style={{ color: "#c4c4cf", fontSize: 16 }}>
-            2020 Computer Engineering graduate from Iowa State University.
-            Outside of work I hike, tinker with side projects (Android/Kotlin,
+            B.S. in Computer Engineering from Iowa State University (2020) and
+            an MBA with an IT focus from Humphreys University (2025). Outside
+            of work I hike, tinker with side projects (Android/Kotlin,
             automation tooling), and keep sharpening algorithms.
           </Paragraph>
           <ul style={{ listStyle: "none" }}>

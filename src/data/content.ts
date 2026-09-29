@@ -1,69 +1,100 @@
 export const experience = [
   {
-    date: "Apr 2025",
+    date: "Apr 2025 – Present",
     title: "Software Engineer III",
     org: "GlobalVetLink",
     detail:
-      "Tech lead on a 5-engineer squad; mentoring, estimation, and delivery under ambiguity.",
+      "Tech lead across 5-engineer squads; drove estimation, mentored 2-3 engineers, and led the release cadence initiative that cut deploys from 2x/week to daily.",
   },
   {
-    date: "Nov 2021",
-    title: "Promoted to Software Engineer II",
+    date: "2023 – 2025",
+    title: "MBA (IT Focus)",
+    org: "Humphreys University",
+  },
+  {
+    date: "Oct 2021 – Apr 2025",
+    title: "Software Engineer II",
     org: "GlobalVetLink",
-    detail: "Progressed from SE I within six months of joining.",
+    detail:
+      "Eliminated a flagged SOC2 audit risk with a PCI-compliant Zuora ACH integration; drove the TypeScript migration from 1.5% to 50% coverage.",
   },
   {
-    date: "May 2021",
+    date: "May 2021 – Oct 2021",
     title: "Software Engineer I",
     org: "GlobalVetLink",
     detail: "React and Groovy/Grails on animal health software.",
   },
   {
-    date: "Aug 2020",
+    date: "Aug 2020 – May 2021",
     title: "Account Management Programmer",
-    org: "SmartData Solutions",
+    org: "Smart Data Solutions",
   },
   {
-    date: "May 2020",
-    title: "B.S. Computer Engineering",
-    org: "Iowa State University",
+    date: "Jul 2020 – Aug 2020",
+    title: "Software Developer Intern",
+    org: "Insuree",
   },
   {
-    date: "Jan 2020",
+    date: "Jan 2020 – May 2020",
     title: "Teaching Assistant",
     org: "Iowa State University",
   },
   {
-    date: "Jun 2019",
+    date: "Jun 2019 – Aug 2019",
     title: "Engineering Intern",
-    org: "Siemens",
+    org: "Siemens Gas & Power",
+  },
+  {
+    date: "2017 – 2020",
+    title: "B.S. Computer Engineering",
+    org: "Iowa State University",
   },
 ];
 
 export const highlights = [
-  "Resolved a flagged SOC2 audit risk by building a Zuora ACH payment integration",
-  "Reverse-engineered a government portal auth flow serving ~5,000 users/week",
+  "Architected an OpenSearch integration replacing legacy database-driven search, from the React UI to the indexing microservice",
+  "Eliminated a flagged SOC2 audit risk with a PCI-compliant Zuora ACH payment integration",
+  "Preserved a mission-critical certificate integration serving ~5,000 weekly users by reverse-engineering a government portal's auth flow",
   "Drove TypeScript adoption from 1.5% to 50% codebase coverage over 18 months",
-  "Replaced a legacy DB-driven search with an OpenSearch integration",
-  "Raised release cadence from twice a week to daily deployments",
+  "Raised release cadence from 2x/week to daily deployments, cutting median PR merge time from 3-4 days to under 48 hours",
 ];
 
 export const skills: Record<string, string[]> = {
-  Backend: ["Java", "Spring Boot", "Groovy", "Grails", "Node.js", "NestJS"],
-  Frontend: ["React", "TypeScript", "Redux", "Next.js"],
+  Backend: ["Java", "Spring Boot", "Groovy", "Grails", "Node.js", "Firebase Functions"],
+  Frontend: ["React", "TypeScript", "Redux", "Next.js", "React Native"],
   Mobile: ["Kotlin", "Jetpack Compose", "Wear OS"],
   "Data & Search": ["PostgreSQL", "MongoDB", "MySQL", "DynamoDB", "OpenSearch"],
   "Cloud & DevOps": ["AWS", "Docker", "Kubernetes", "CI/CD", "Jenkins"],
+  Other: ["Zuora", "Cypress", "REST APIs"],
 };
 
 export type Project = {
   name: string;
   description: string;
   tech: string[];
-  href: string;
+  href?: string;
 };
 
 export const projects: Project[] = [
+  {
+    name: "ScanBid",
+    description:
+      "Auction inventory platform that pulls product descriptions from external sources using AI. Built to explore Next.js 14 and production AI integration patterns.",
+    tech: ["Next.js 14", "Prisma", "PostgreSQL", "AI APIs"],
+  },
+  {
+    name: "AiAnalyze",
+    description:
+      "Android app using Gemini to summarize articles and links into searchable snippets. Approved for Google Play production.",
+    tech: ["Kotlin", "Jetpack Compose", "Gemini API", "DynamoDB"],
+  },
+  {
+    name: "This site",
+    description:
+      "This portfolio itself — rebuilt from a stale Create React App/antd v4 site into Next.js 16 (App Router, SSR) with TypeScript and Ant Design v6.",
+    tech: ["Next.js", "TypeScript", "Ant Design v6"],
+    href: "https://github.com/raibbl/raed-website",
+  },
   {
     name: "AyaBelQuran",
     description:
@@ -84,12 +115,6 @@ export const projects: Project[] = [
       "VS Code extension that tracks a workspace's TypeScript adoption progress and flags JS files worth refactoring.",
     tech: ["TypeScript", "VS Code API"],
     href: "https://github.com/raibbl/TsLens",
-  },
-  {
-    name: "Moneypal",
-    description: "Personal finance tracking app built with Expo/React Native.",
-    tech: ["React Native", "Expo", "TypeScript"],
-    href: "https://github.com/raibbl/Moneypal",
   },
 ];
 
