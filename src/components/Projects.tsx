@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, Tag, Typography, Row, Col, Space } from "antd";
-import { GithubOutlined, AndroidOutlined, RightOutlined, LinkOutlined } from "@ant-design/icons";
+import { GithubOutlined, AndroidOutlined, RightOutlined, ArrowRightOutlined } from "@ant-design/icons";
 import { projects, type Project } from "@/data/content";
 
 const { Title, Paragraph } = Typography;
@@ -28,11 +28,6 @@ function ProjectCard({ p, installs }: { p: Project; installs?: string | null }) 
               <AndroidOutlined style={{ color: "#9a9aab", fontSize: 18 }} />
             </a>
           )}
-          {p.demoUrl && (
-            <a href={p.demoUrl} target="_blank" rel="noreferrer" aria-label={`${p.name} live preview`}>
-              <LinkOutlined style={{ color: "#9a9aab", fontSize: 18 }} />
-            </a>
-          )}
         </Space>
       </div>
       <Paragraph style={{ color: "#9a9aab", marginTop: 10 }}>{p.description}</Paragraph>
@@ -57,6 +52,18 @@ function ProjectCard({ p, installs }: { p: Project; installs?: string | null }) 
         <Tag color="green" style={{ marginBottom: 10 }}>
           {installs ? `${installs} installs` : "On Google Play"}
         </Tag>
+      )}
+      {p.demoUrl && (
+        <div style={{ marginBottom: 10 }}>
+          <a
+            href={p.demoUrl}
+            target="_blank"
+            rel="noreferrer"
+            style={{ color: "#7c6cf6", fontSize: 13.5, fontWeight: 600 }}
+          >
+            Live demo <ArrowRightOutlined style={{ fontSize: 11 }} />
+          </a>
+        </div>
       )}
       <div>
         {p.tech.map((t) => (
