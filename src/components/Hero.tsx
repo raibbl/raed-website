@@ -11,7 +11,7 @@ export default function Hero() {
       id="top"
       style={{
         padding: "120px 24px 72px",
-        maxWidth: 1200,
+        maxWidth: "min(1440px, 92vw)",
         margin: "0 auto",
       }}
     >
