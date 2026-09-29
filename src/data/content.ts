@@ -57,6 +57,7 @@ export const highlights = [
   "Preserved a mission-critical certificate integration serving ~5,000 weekly users by reverse-engineering a government portal's auth flow",
   "Drove TypeScript adoption from 1.5% to 50% codebase coverage over 18 months",
   "Helped drive the initiative that raised release cadence from 2x/week to daily deployments, cutting median PR merge time from 3-4 days to under 48 hours",
+  "Adopted FusionAuth and helped plan a JIT migration path for legacy users, modernizing auth and making it easy to interoperate with external identity providers without managing that integration in-house",
 ];
 
 export const skills: Record<string, string[]> = {
