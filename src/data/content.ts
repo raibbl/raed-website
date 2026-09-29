@@ -75,6 +75,7 @@ export type Project = {
   tech: string[];
   href?: string;
   playStoreId?: string;
+  demoUrl?: string;
 };
 
 export const projects: Project[] = [
@@ -94,9 +95,10 @@ export const projects: Project[] = [
       "Android app (published as \"Briefly\") using Gemini to summarize articles and links into searchable snippets.",
     highlights: [
       "Live on Google Play, not just a portfolio demo",
-      "Gemini API integration for on-device summarization",
+      "Screen-capture summarization via on-device OCR (ML Kit), not just link sharing",
     ],
-    tech: ["Kotlin", "Jetpack Compose", "Gemini API", "DynamoDB"],
+    tech: ["Kotlin", "Jetpack Compose", "Gemini", "Firebase", "Room"],
+    href: "https://github.com/raibbl/AiSummarize",
     playStoreId: "com.raibbl.AiAnalyze",
   },
   {
@@ -127,11 +129,13 @@ export const projects: Project[] = [
     description:
       "E-ink calendar display: a Next.js backend paired with custom ESP32 firmware driving the physical display.",
     highlights: [
-      "Full stack across software and hardware — web backend plus C++ firmware",
+      "A full-stack engineer's take on embedded systems — same Next.js skills, applied to real hardware",
+      "Flashed and debugged over serial with the Arduino CLI, deployed the backend with Vercel",
       "Drives a real e-ink display, not a simulator",
     ],
     tech: ["Next.js", "TypeScript", "C++/ESP32"],
     href: "https://github.com/raibbl/inkcal",
+    demoUrl: "https://inkcal-omega.vercel.app/",
   },
   {
     name: "TsLens",

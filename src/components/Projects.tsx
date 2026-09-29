@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, Tag, Typography, Row, Col, Space } from "antd";
-import { GithubOutlined, AndroidOutlined, RightOutlined } from "@ant-design/icons";
+import { GithubOutlined, AndroidOutlined, RightOutlined, LinkOutlined } from "@ant-design/icons";
 import { projects, type Project } from "@/data/content";
 
 const { Title, Paragraph } = Typography;
@@ -26,6 +26,11 @@ function ProjectCard({ p, installs }: { p: Project; installs?: string | null }) 
           {playStoreUrl && (
             <a href={playStoreUrl} target="_blank" rel="noreferrer" aria-label={`${p.name} on Google Play`}>
               <AndroidOutlined style={{ color: "#9a9aab", fontSize: 18 }} />
+            </a>
+          )}
+          {p.demoUrl && (
+            <a href={p.demoUrl} target="_blank" rel="noreferrer" aria-label={`${p.name} live preview`}>
+              <LinkOutlined style={{ color: "#9a9aab", fontSize: 18 }} />
             </a>
           )}
         </Space>
