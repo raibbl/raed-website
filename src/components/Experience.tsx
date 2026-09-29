@@ -15,7 +15,7 @@ export default function Experience() {
         style={{ marginTop: 32 }}
         items={experience.map((e) => ({
           color: "#7c6cf6",
-          children: (
+          content: (
             <div key={e.title}>
               <Text style={{ color: "#7c6cf6", fontSize: 13 }}>{e.date}</Text>
               <div style={{ color: "#f4f4f7", fontWeight: 600, fontSize: 16 }}>

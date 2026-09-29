@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Typography, List } from "antd";
+import { Typography } from "antd";
 import { CheckCircleOutlined } from "@ant-design/icons";
 import { highlights } from "@/data/content";
 
@@ -42,15 +42,14 @@ export default function About() {
             Outside of work I hike, tinker with side projects (Android/Kotlin,
             automation tooling), and keep sharpening algorithms.
           </Paragraph>
-          <List
-            dataSource={highlights}
-            renderItem={(item) => (
-              <List.Item style={{ border: "none", padding: "6px 0" }}>
+          <ul style={{ listStyle: "none" }}>
+            {highlights.map((item) => (
+              <li key={item} style={{ padding: "6px 0" }}>
                 <CheckCircleOutlined style={{ color: "#7c6cf6", marginRight: 10 }} />
                 <span style={{ color: "#c4c4cf" }}>{item}</span>
-              </List.Item>
-            )}
-          />
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

@@ -55,7 +55,7 @@ export default function Nav() {
       />
 
       <Drawer open={open} onClose={() => setOpen(false)} placement="right" title="Menu">
-        <Space direction="vertical" size="large">
+        <Space orientation="vertical" size="large">
           {links.map((l) => (
             <a key={l.href} href={l.href} onClick={() => setOpen(false)}>
               {l.label}
