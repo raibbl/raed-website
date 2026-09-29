@@ -13,7 +13,7 @@ export default function Skills() {
       </Title>
       <Row gutter={[24, 24]} style={{ marginTop: 24 }}>
         {Object.entries(skills).map(([category, items]) => (
-          <Col xs={24} sm={12} key={category}>
+          <Col xs={24} sm={12} lg={8} key={category}>
             <Text style={{ color: "#7c6cf6", fontWeight: 600 }}>{category}</Text>
             <div style={{ marginTop: 10 }}>
               {items.map((s) => (

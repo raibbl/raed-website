@@ -88,7 +88,7 @@ export default function Projects({
       </Title>
       <Row gutter={[20, 20]} style={{ marginTop: 24 }}>
         {projects.map((p) => (
-          <Col xs={24} sm={12} key={p.name}>
+          <Col xs={24} sm={12} lg={8} key={p.name}>
             <ProjectCard p={p} installs={p.playStoreId ? installCounts[p.playStoreId] : undefined} />
           </Col>
         ))}
