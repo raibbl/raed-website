@@ -86,8 +86,9 @@ export const projects: Project[] = [
   {
     name: "AiAnalyze",
     description:
-      "Android app using Gemini to summarize articles and links into searchable snippets. Approved for Google Play production.",
+      "Android app (published as \"Briefly\") using Gemini to summarize articles and links into searchable snippets.",
     tech: ["Kotlin", "Jetpack Compose", "Gemini API", "DynamoDB"],
+    playStoreId: "com.raibbl.AiAnalyze",
   },
   {
     name: "This site",
