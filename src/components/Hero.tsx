@@ -26,7 +26,10 @@ export default function Hero() {
         from veterinary health software at GlobalVetLink to AI-powered side
         projects.
       </Paragraph>
-      <Space size="middle" style={{ marginTop: 24 }} wrap>
+      <div style={{ color: "#5c5c6b", fontSize: 14, marginTop: 4, marginBottom: 24 }}>
+        React · TypeScript · Next.js · Java · AWS · Kotlin
+      </div>
+      <Space size="middle" wrap>
         <Button type="primary" size="large" href="#projects" icon={<ArrowRightOutlined />}>
           View Projects
         </Button>
