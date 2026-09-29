@@ -4,7 +4,7 @@ export const experience = [
     title: "Software Engineer III",
     org: "GlobalVetLink",
     detail:
-      "Tech lead across 5-engineer squads; drove estimation, mentored 2-3 engineers, and led the release cadence initiative that cut deploys from 2x/week to daily.",
+      "Tech lead across 5-engineer squads; drove estimation, mentored 2-3 engineers, and helped drive the initiative that raised release cadence from 2x/week to daily deployments.",
   },
   {
     date: "2023 – 2025",
@@ -56,7 +56,7 @@ export const highlights = [
   "Eliminated a flagged SOC2 audit risk with a PCI-compliant Zuora ACH payment integration",
   "Preserved a mission-critical certificate integration serving ~5,000 weekly users by reverse-engineering a government portal's auth flow",
   "Drove TypeScript adoption from 1.5% to 50% codebase coverage over 18 months",
-  "Raised release cadence from 2x/week to daily deployments, cutting median PR merge time from 3-4 days to under 48 hours",
+  "Helped drive the initiative that raised release cadence from 2x/week to daily deployments, cutting median PR merge time from 3-4 days to under 48 hours",
 ];
 
 export const skills: Record<string, string[]> = {
