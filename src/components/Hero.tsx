@@ -2,6 +2,7 @@
 
 import { Button, Space, Typography } from "antd";
 import { DownloadOutlined, ArrowRightOutlined } from "@ant-design/icons";
+import { resumeUrl } from "@/data/content";
 
 const { Title, Paragraph, Text } = Typography;
 
@@ -33,7 +34,7 @@ export default function Hero() {
         <Button type="primary" size="large" href="#projects" icon={<ArrowRightOutlined />}>
           View Projects
         </Button>
-        <Button size="large" href="/resume.pdf" target="_blank" icon={<DownloadOutlined />}>
+        <Button size="large" href={resumeUrl} target="_blank" icon={<DownloadOutlined />}>
           Resume
         </Button>
       </Space>
