@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Button, Drawer, Space } from "antd";
 import { MenuOutlined, DownloadOutlined, GithubOutlined, LinkedinOutlined } from "@ant-design/icons";
-import { socials } from "@/data/content";
+import { resumeUrl, socials } from "@/data/content";
 
 const links = [
   { href: "#about", label: "About" },
@@ -58,7 +58,7 @@ export default function Nav() {
           icon={<LinkedinOutlined style={{ color: "#9a9aab", fontSize: 18 }} />}
         />
         <span className="nav-desktop-cta" style={{ display: "none" }}>
-          <Button icon={<DownloadOutlined />} href="/resume.pdf" target="_blank">
+          <Button icon={<DownloadOutlined />} href={resumeUrl} target="_blank">
             Resume
           </Button>
         </span>
@@ -77,7 +77,7 @@ export default function Nav() {
               {l.label}
             </a>
           ))}
-          <Button icon={<DownloadOutlined />} href="/resume.pdf" target="_blank" block>
+          <Button icon={<DownloadOutlined />} href={resumeUrl} target="_blank" block>
             Resume
           </Button>
         </Space>

@@ -151,6 +151,10 @@ export const projects: Project[] = [
   },
 ];
 
+// The one link every Resume button uses. Bump `v` whenever public/resume.pdf
+// is replaced so browsers fetch the new file instead of a cached copy.
+export const resumeUrl = "/resume.pdf?v=2025-v4";
+
 export const socials = {
   github: "https://github.com/raibbl",
   linkedin: "https://www.linkedin.com/in/raedalbloushy/",
